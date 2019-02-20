@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     "mode": "development",
-    "entry": path.join(__dirname, 'client/index.js'),
+    "entry": path.join(__dirname, 'client/index.jsx'),
     "output": {
         "path": path.join(__dirname, 'dist'),
         "filename": "[name].[chunkhash:8].js"
@@ -50,7 +50,10 @@ module.exports = {
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({
+        template: require('html-webpack-template'),
+        appMountId: 'app'
+    })],
     devServer: {
         lazy: true,
         hot: true,
