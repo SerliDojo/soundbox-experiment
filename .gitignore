@@ -62,3 +62,6 @@ typings/
 
 ## Yarn exclusion
 yarn.lock
+
+## dev
+dist/
