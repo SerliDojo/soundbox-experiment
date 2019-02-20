@@ -18,7 +18,16 @@ module.exports = {
             },
             {
                 "test": /\.(js|jsx)$/,
+                "include": [
+                    path.resolve(__dirname, "client")
+                ],
                 "exclude": /node_modules|server/,
+                "resolve": {
+                    "extensions": [".jsx", ".js"],
+                    "alias": {
+                        "Api": path.resolve(__dirname, 'client/api/')
+                    }
+                },
                 "use": {
                     "loader": "babel-loader",
                     "options": {

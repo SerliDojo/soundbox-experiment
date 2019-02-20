@@ -1,6 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Index = () => <div>Hello React! test</div>;
+import Connection from "./Connection";
 
-ReactDOM.render(<Index />, document.getElementById("app"));
+const Index = props => (
+    <div>
+      Hello React!
+        {props.children}
+    </div>
+);
+
+ReactDOM.render(
+    (
+        <Index>
+            <Connection />
+        </Index>
+    ),
+    document.getElementById("app"),
+);

@@ -4,10 +4,23 @@
         "semi": ["error", "always"],
         "quotes": ["error", "double"],
         "indent": ["error", 4],
-        "no-console": ["error", { "allow": ["warn", "error", "log"] }]
+        "react/jsx-indent": ["error", 4],
+        "react/prop-types": false,
+        "import/no-unresolved": false,
+        "react/destructuring-assignment": false,
+        "no-console": ["error", {
+            "allow": ["warn", "error", "log"]
+        }]
     },
     "env": {
         "browser": true,
         "node": true
-      }
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.js"
+            }
+        }
+    }
 }

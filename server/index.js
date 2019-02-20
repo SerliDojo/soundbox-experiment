@@ -7,10 +7,12 @@ const uuid = require("uuid/v4");
 
 const users = [];
 
-const User = (id, name) => {
-    this.id = id;
-    this.name = name;
-};
+class User {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
 
 const connection = (data) => {
     const user = new User(uuid(), data);
