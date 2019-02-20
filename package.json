@@ -5,11 +5,39 @@
   "main": "index.js",
   "repository": "git@github.com:SerliDojo/soundbox-experiment.git",
   "author": "Jean-baptiste JOFFRE <jeanbaptiste.joffre@gmail.com>",
+  "scripts": {
+    "start": "concurrently 'yarn run server:dev' 'yarn run client:dev' 'yarn run client:dev:build'",
+    "server:dev": "node server/index.js",
+    "client:dev": "webpack-dev-server",
+    "client:dev:build": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.4.8",
+    "babel-loader": "^8.0.5",
     "chalk": "^2.4.2",
+    "concurrently": "^4.1.0",
+    "css-loader": "^2.1.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.14.1",
+    "eslint-loader": "^2.1.2",
     "express": "^4.16.4",
-    "socket.io": "^2.2.0"
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.10",
+    "postcss": "^7.0.14",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "socket.io": "^2.2.0",
+    "style-loader": "^0.23.1",
+    "uuid": "^3.3.2",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
   }
 }
