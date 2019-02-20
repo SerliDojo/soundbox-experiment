@@ -6,5 +6,8 @@
   "repository": "git@github.com:SerliDojo/soundbox-experiment.git",
   "author": "Jean-baptiste JOFFRE <jeanbaptiste.joffre@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
 }
