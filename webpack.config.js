@@ -6,7 +6,7 @@ module.exports = {
     "entry": path.join(__dirname, 'client/index.jsx'),
     "output": {
         "path": path.join(__dirname, 'dist'),
-        "filename": "[name].[chunkhash:8].js"
+        "filename": "[name].[hash:8].js"
     },
     "devtool": "source-map",
     "module": {
@@ -55,7 +55,6 @@ module.exports = {
         appMountId: 'app'
     })],
     devServer: {
-        lazy: true,
         hot: true,
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
