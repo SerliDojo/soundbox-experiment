@@ -1,0 +1,10 @@
+{
+  "name": "soundbox-experiment",
+  "version": "1.0.0",
+  "description": "Soundbox with SocketIo and sounds",
+  "main": "index.js",
+  "repository": "git@github.com:SerliDojo/soundbox-experiment.git",
+  "author": "Jean-baptiste JOFFRE <jeanbaptiste.joffre@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
